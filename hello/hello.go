@@ -1,9 +1,10 @@
 package main
 
 import (
-	"fmt"
-	"log"
 	"example.com/greetings"
+	"fmt"
+	"golang.org/x/example/stringutil"
+	"log"
 )
 
 func main() {
@@ -20,4 +21,7 @@ func main() {
 	}
 
 	fmt.Println(messages)
+
+	// test for calling with another api
+	fmt.Println(stringutil.Reverse("Hello"))
 }
