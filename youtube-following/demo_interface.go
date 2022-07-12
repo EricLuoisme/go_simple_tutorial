@@ -4,16 +4,22 @@ import "fmt"
 
 func main() {
 
+	/*
+		- Use many, small interfaces
+		- Do not export interfaces for types that will be consumed
+		- Do export interfaces for types that will be used by package
+	*/
+
 	// in Golang, interfaces no using by implementation
 	// one can 'implement' a interface, without actually 'implement'
 	// all it's methods
-	var w Writer = ConsoleWriter{}
+	var w writer = ConsoleWriter{}
 	w.Write([]byte("Hello World!"))
 
 }
 
 // Writer interface describe behaviours
-type Writer interface {
+type writer interface {
 	Write([]byte) (int, error)
 }
 
