@@ -42,6 +42,8 @@ func main() {
 		words := strings.Split(string(line), " ")
 		p := FullName{fname: words[0], lname: words[1]}
 
+		// using fmt.Sscanf(scanner.Text, "%s %s", &n.fname, &n.lname) also working
+
 		// append
 		storeSlice = append(storeSlice, p)
 	}
