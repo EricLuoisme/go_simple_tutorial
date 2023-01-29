@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// Basic types like int, int8, unit15, float32, string, bool, byte, Array, Structs
 func main() {
 	a, b := 0, 0
 
