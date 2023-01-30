@@ -7,16 +7,16 @@ func main() {
 	arrInt := []int{1, 2, 3, 4, 5}
 	sliceInt := arrInt[3:]
 
-	fmt.Println("Slice Example")
-	fmt.Printf("Init\nArraInt: %+v, SliceInt: %+v\n\n", arrInt, sliceInt)
+	fmt.Println("\nSlice Example")
+	fmt.Printf("Init\nArraInt: %+v, SliceInt: %+v\n", arrInt, sliceInt)
 	sliceInt[0] = 10
-	fmt.Printf("After\nArraInt: %+v, SliceInt: %+v\n\n", arrInt, sliceInt)
+	fmt.Printf("After\nArraInt: %+v, SliceInt: %+v\n", arrInt, sliceInt)
 	sliceInt = append(sliceInt, 10)
-	fmt.Printf("Final\nArraInt: %+v, SliceInt: %+v\n\n", arrInt, sliceInt)
+	fmt.Printf("Final\nArraInt: %+v, SliceInt: %+v\n", arrInt, sliceInt)
 
 	emptyMap := make(map[string]interface{})
 	fmt.Println("Map Example")
-	fmt.Printf("Init\nemptyMap : %+v\n", emptyMap)
+	fmt.Printf("\nInit\nemptyMap : %+v\n", emptyMap)
 
 	MapFunc(emptyMap)
 	fmt.Printf("After\nemptyMap : %+v\n", emptyMap)
