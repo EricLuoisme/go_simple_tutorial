@@ -10,6 +10,15 @@ func main() {
 	Dist2 := MakeDistOrigin(2, 2)
 	fmt.Println(Dist1(2, 2))
 	fmt.Println(Dist2(2, 2))
+
+	// defer example
+	i := 1
+	defer fmt.Println(i + 1)
+	i++
+	i++
+	i++
+	fmt.Println("Hello?")
+
 }
 
 // MakeDistOrigin returning the func (float64, float64) float64 as a return
