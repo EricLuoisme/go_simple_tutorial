@@ -32,7 +32,7 @@ func (a *Animal) initAnimal(food, loco, sound string) {
 	a.noise = sound
 }
 
-// chooseFunc is for calling related method of an animal
+// getAnimalInfo is for returning related method of an animal
 func (a *Animal) getAnimalInfo(method string) func() string {
 	if "eat" == method {
 		return a.Eat
@@ -57,6 +57,7 @@ func main() {
 		"snake": snake,
 	}
 
+	// main procedure
 	scanner := bufio.NewScanner(os.Stdin)
 	for true {
 		fmt.Println(">")
