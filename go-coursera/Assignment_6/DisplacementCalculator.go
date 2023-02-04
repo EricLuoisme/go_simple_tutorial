@@ -15,8 +15,6 @@ func main() {
 		return
 	}
 
-	fmt.Printf("%v, %v, %v\n", a, v0, s0)
-
 	// 2. calculate formula
 	formula := GenDisplaceFn(a, v0, s0)
 
@@ -29,7 +27,7 @@ func main() {
 }
 
 // GenDisplaceFn would return a formula -> (1/2)at^2 + v_0t + s_0
-func GenDisplaceFn(a float64, v0 float64, s0 float64) func(t float64) float64 {
+func GenDisplaceFn(a, v0, s0 float64) func(t float64) float64 {
 	return func(t float64) float64 {
 		return 0.5*a*math.Pow(t, 2) + v0*t + s0
 	}
