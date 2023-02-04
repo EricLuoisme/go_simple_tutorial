@@ -14,15 +14,12 @@ type Animal interface {
 }
 
 type Cow struct {
-	name string
 }
 
 type Bird struct {
-	name string
 }
 
 type Snake struct {
-	name string
 }
 
 func (c Cow) Eat() {
@@ -78,7 +75,7 @@ func main() {
 		// dispatch according to command
 		switch {
 		case fields[0] == "newanimal":
-			animal := createAnimal(fields[1], fields[2])
+			animal := createAnimal(fields[1])
 			existAniMap[fields[2]] = animal
 
 		case fields[0] == "query":
@@ -88,15 +85,15 @@ func main() {
 }
 
 // createAnimal is for creating new animal
-func createAnimal(category string, uniName string) Animal {
+func createAnimal(category string) Animal {
 	var ani Animal
 	switch {
 	case category == "cow":
-		ani = Cow{uniName}
+		ani = Cow{}
 	case category == "bird":
-		ani = Bird{uniName}
+		ani = Bird{}
 	default:
-		ani = Snake{uniName}
+		ani = Snake{}
 	}
 	fmt.Println("Created it!")
 	return ani
