@@ -47,9 +47,9 @@ func (p Philo) eat(num int, cn chan int, wg *sync.WaitGroup) {
 			p.rightCS.Lock()
 			p.leftCS.Lock()
 		}
-		fmt.Printf("starting to eat<%v>\n", num)
+		fmt.Printf("starting to eat %v\n", num)
 		time.Sleep(1 * time.Second)
-		fmt.Printf("finishing eating<%v>\n", num)
+		fmt.Printf("finishing eating %v\n", num)
 		p.leftCS.Unlock()
 		p.rightCS.Unlock()
 		// consume as 'giving-back' permission to host
